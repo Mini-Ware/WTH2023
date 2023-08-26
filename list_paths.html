@@ -10,13 +10,16 @@
             <p class="text-center m-2">Click on any path to view instructions</p>
         </div>
 
-        <div id="path_list" class="mx-auto w-fit">
-            <div class="p-4 bg-gray-500 rounded w-96">
+        <div id="path_list_copy" class="mx-auto w-fit hidden">
+            <div id="path_item" class="p-4 bg-gray-500 rounded w-96 my-2 cursor-pointer">
                 <h2>Name of path</h2>
                 <p>Instructions stored: 5</p>
             </div>
         </div>
-        
+
+        <div id="path_list" class="mx-auto w-fit">
+        </div>
+
         <a href="/"><div class="mx-auto w-fit m-6 cursor-pointer">
             <h2 class="text-1xl flex mx-1/2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
@@ -24,5 +27,7 @@
               
                Go Back</h2>
         </div></a>
+
+        <script src="./js/list_paths.js"/>
     </body>
 </html>
