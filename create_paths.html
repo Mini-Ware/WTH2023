@@ -4,46 +4,58 @@
         <title>Create Paths</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
-        <h1 class="text-3xl text-center m-16">CREATE PATHS</h1>
-        <div class="w-fit mx-auto">
-            <div class="rounded bg-gray-500 px-5 w-96 flex m-4">
-                <div class="m-5 flex">
-                    <h3 class="mx-5">Name</h3>
-                    <input id="path_name_data" type="text"></input>
+    <body class="md:px-96 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900">
+        <div class="py-2 px-8 rounded bg-white drop-shadow my-10">
+            <div class="my-10">
+                <h1 class="text-3xl ">CREATE PATHS</h1>
+                <p class=" my-2">Fill up the path with instructions!</p>
+            </div>
+    
+            <h1 class="text-2xl  mt-16">Basic Setup</h1>
+            <div class="w-fit">
+                <div class="rounded bg-gray-300 px-5 mt-4  flex">
+                    <div class="py-5 flex">
+                        <h3 class="mr-5">Name</h3>
+                        <input id="path_name_data" class="rounded" type="text"></input>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <h1 class="text-2xl text-center mt-16">Instructions</h1>
-
-        <div id="item_list" class="w-fit mx-auto">
-            <div id="item_list" class="rounded bg-gray-500 p-5 flex m-4">
-                <div class="m-5">
-                    <h3>Directions</h3>
-                    <input class="direction_data" type="text"></input>
-                </div>
-                <div class="m-5">
-                    <h3>Steps</h3>
-                    <input class="steps_data" type="text"></input>
+    
+            <h1 class="text-2xl  mt-16">Instructions</h1>
+            <div id="item_list" class="w-fit">
+                <div id="item_list" class="rounded bg-gray-300 py-2 flex my-4">
+                    <div class="m-5">
+                        <h3 class="flex"><!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 m-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+                          </svg> -->
+                          Directions</h3>
+                        <input class="direction_data rounded my-2" type="text"></input>
+                    </div>
+                    <div class="m-5">
+                        <h3 class="flex"><!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 m-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg> -->
+                           Steps</h3>
+                        <input class="steps_data rounded my-2" type="text"></input>
+                    </div>
                 </div>
             </div>
+            <div class="w-fit m-y6 cursor-pointer" onclick="create_new_field()">
+                <h2 class="text-1xl flex mx-1/2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                   Add new instruction</h2>
+            </div>
+            <h2 onclick="submit_new_path()" class="cursor-pointer mt-16 text-1xl bg-gray-300 rounded w-48  my-2 mb-16 p-2 w-fit">CONFIRM PATH</h2>
+    
+            <a href="/"><div class="mx-auto w-fit m-6 cursor-pointer">
+                <h2 class="text-1xl flex mx-1/2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                  </svg>
+                  
+                   Go Back</h2>
+            </div></a>
         </div>
-        <div class="mx-auto w-fit m-6 cursor-pointer" onclick="create_new_field()">
-            <h2 class="text-1xl flex mx-1/2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-               Add new instruction</h2>
-        </div>
-        <h2 onclick="submit_new_path()" class="cursor-pointer mt-16 text-1xl bg-gray-500 rounded w-60 text-center m-4 p-4 mx-auto">CONFIRM PATH</h2>
-
-        <a href="/"><div class="mx-auto w-fit m-6 cursor-pointer">
-            <h2 class="text-1xl flex mx-1/2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-              </svg>
-              
-               Go Back</h2>
-        </div></a>
 
         <script src="./js/create_paths.js"></script>
     </body>

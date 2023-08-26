@@ -8,7 +8,7 @@ function create_new_fields(){
             const path_data = localStorage.key(i);
     
             initial_field.querySelector("h2").innerText = "Name of path: "+path_data;
-            initial_field.querySelector("p").innerText = "Instructions ("+JSON.parse(localStorage.getItem(localStorage.key(i))).length+"): left, right";
+            initial_field.querySelector("p").innerText = "Total Instructions: "+JSON.parse(localStorage.getItem(localStorage.key(i))).length+"";
     
             initial_field.addEventListener("click", ()=>{window.open("view_paths.html?path="+path_data+"&id=0", "_self")});
     
