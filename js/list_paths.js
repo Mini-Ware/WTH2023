@@ -9,8 +9,10 @@ function create_new_fields(){
     
             initial_field.querySelector("h2").innerText = "Path Name: "+path_data;
             initial_field.querySelector("p").innerText = "Total Instructions: "+JSON.parse(localStorage.getItem(localStorage.key(i))).length+"";
+            initial_field.querySelector("a").id = path_data
     
-            initial_field.addEventListener("click", ()=>{window.open("view_paths.html?path="+path_data+"&id=0", "_self")});
+            initial_field.querySelector("h2").addEventListener("click", ()=>{window.open("view_paths.html?path="+path_data+"&id=0", "_self")});
+            initial_field.querySelector("p").addEventListener("click", ()=>{window.open("view_paths.html?path="+path_data+"&id=0", "_self")});
     
             document.getElementById("path_list").appendChild(initial_field)
         }
