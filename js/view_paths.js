@@ -6,7 +6,7 @@ function play_path(id, ip){
 
 function play_next(){
     if (ip < JSON.parse(localStorage.getItem(id)).length-1){
-        window.open("view_paths.html?path="+id+"&id="+Number(ip+1).toString(), "_self")
+        window.open("view_paths.html?path="+id+"&id="+(Number(ip)+1).toString(), "_self")
     }else{
         window.open("/","_self")
     }
