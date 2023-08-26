@@ -1,4 +1,5 @@
 function create_new_fields(){
+    console.log(localStorage.length)
 
     if (localStorage.length != 0){
         for (i=0;i<localStorage.length;i++){
@@ -17,10 +18,12 @@ function create_new_fields(){
             document.getElementById("path_list").appendChild(initial_field)
         }
     }else{
+        console.log("hi")
         no_path_err = document.createElement("h1");
         no_path_err.innerText = "No paths available! Go back and create a new path!";
         document.getElementById("path_list").appendChild(no_path_err);
     }
 }
 
+console.log(1)
 create_new_fields();
