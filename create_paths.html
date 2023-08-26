@@ -4,4 +4,37 @@
         <title>Create Paths</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
+    <body>
+        <h1 class="text-3xl text-center m-16">CREATE PATHS</h1>
+        <div class="w-fit mx-auto">
+            <div class="rounded bg-gray-500 px-5 w-96 flex m-4">
+                <div class="m-5 flex">
+                    <h3 class="mx-5">Name</h3>
+                    <input id="path_name_data" type="text"></input>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-2xl text-center mt-16">Instructions</h1>
+        <div id="item_list" class="w-fit mx-auto">
+            <div id="list_item" class="rounded bg-gray-500 p-5 flex m-4">
+                <div class="m-5">
+                    <h3>Directions</h3>
+                    <input id="direction_data" type="text"></input>
+                </div>
+                <div class="m-5">
+                    <h3>Steps</h3>
+                    <input id="steps_data" type="text"></input>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto w-fit m-6 cursor-pointer" onclick="create_new_field()">
+            <h2 class="text-1xl flex mx-1/2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+               Add new instruction</h2>
+        </div>
+        <h2 onclick="submit_new_path()" class="cursor-pointer mt-16 text-1xl bg-gray-500 rounded w-60 text-center m-4 p-4 mx-auto">CONFIRM PATH</h2>
+        <script src="./js/create_paths.js"></script>
+    </body>
 </html>
