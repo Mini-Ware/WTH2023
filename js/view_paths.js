@@ -16,3 +16,7 @@ let params = new URLSearchParams(document.location.search);
 id = params.get("path");
 ip = params.get("id");
 play_path(id, ip);
+
+if (ip == JSON.parse(localStorage.getItem(id)).length-1){
+    document.getElementById("play_button").innerText="END";
+}
