@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Create Paths</title>
+        <title>NaviGo - Create Paths</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="px-4 md:px-96 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
@@ -16,7 +16,7 @@
                 <div class="rounded bg-gray-300 px-5 mt-4  flex">
                     <div class="py-5 flex">
                         <h3 class="mr-5">Path Name</h3>
-                        <input id="path_name_data" class="rounded" type="text"></input>
+                        <input required id="path_name_data" class="rounded" type="text"></input>
                     </div>
                 </div>
             </div>
@@ -29,14 +29,20 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
                           </svg> -->
                           Directions</h3>
-                        <input class="direction_data rounded my-2" type="text"></input>
+
+                        <select name="cars" id="cars" class="direction_data rounded my-2">
+                            <option value="forward">Forward</option>
+                            <option value="left">Left</option>
+                            <option value="right">Right</option>
+                        </select> 
+<!--                         <input required class="direction_data rounded my-2" type="text"></input> -->
                     </div>
                     <div class="m-5">
                         <h3 class="flex"><!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 m-1">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg> -->
                            Steps</h3>
-                        <input class="steps_data rounded my-2" type="text"></input>
+                        <input required class="steps_data rounded my-2" type="number"></input>
                     </div>
                 </div>
             </div>
